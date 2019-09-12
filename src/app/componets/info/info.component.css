@@ -1,0 +1,32 @@
+
+
+.imgIconoGrande{
+    width: 100%;                             /*   img responsive flojear al centro  y ajustar*/
+    height: auto;
+    max-width: 100px;
+    display: block;
+    border-radius: 10px;
+    border: rgb(233, 233, 233) 1px solid;
+    margin: 0px auto;    
+
+}
+.caja0{
+    border: PowderBlue 1px solid;
+}
+.caja1{
+    border: PowderBlue 1px solid;
+}
+
+.caja2{
+    border: PowderBlue 1px solid;
+}
+
+.imPantallaso{
+    width: 100%;                             /*   img responsive flojear al centro  y ajustar*/
+    height: auto;
+    max-width: 500px;
+    display: block;
+    border-radius: 10px;
+    border: rgb(233, 233, 233) 1px solid;
+    margin: 0px auto; 
+}
