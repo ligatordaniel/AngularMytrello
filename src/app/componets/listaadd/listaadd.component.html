@@ -1,0 +1,5 @@
+<form (ngSubmit)="agregar()">
+  <!--a la variable any de nombre "name" es el de listaadd.compontent.ts -->
+  <input type="text" placeholder="Ingresa tarea aquí" name="name" class="form-control" [(ngModel)]="item.name">
+  <button class="btn btn-warning mt-2" type="submit">Agregar</button>
+</form>
