@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';//firestores 2 servicio,
-import { Observable } from 'rxjs';//firestore2 servicio
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore'; /*firestores 2 servicio*/
+import { Observable } from 'rxjs'; /*firestore2 servicio*/
 
-export interface Item { name: string; }//firestore2 servicio
+export interface Item { name: string; } /*firestore2 servicio*/
 
 import { map } from 'rxjs/operators';
 
@@ -16,7 +16,7 @@ export class ConexionService {
 private itemsCollection: AngularFirestoreCollection<Item>;
 items: Observable<Item[]>;
 
-private itemDoc: AngularFirestoreDocument<Item>; //firebase4||variable para eliminar
+private itemDoc: AngularFirestoreDocument<Item>; /*firebase4||variable para eliminar*/
 
 constructor(private afs: AngularFirestore) {
   this.itemsCollection = afs.collection<Item>('items');
@@ -28,7 +28,7 @@ constructor(private afs: AngularFirestore) {
     }))
   );
 }
-    listaItem(){
+    listaItem() {
       return this.items;
   }
 
@@ -40,16 +40,16 @@ constructor(private afs: AngularFirestore) {
 
 
   /*firestore4 */
-  eliminarItem(item){                        
-    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);  //firebase4|| comillas espaciales contenido dinamico
+  eliminarItem(item) {
+    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);  /*firebase4|| comillas espaciales contenido dinamico*/
     this.itemDoc.delete();
   }
   /*firestore4 */
 
 
   /*firestore5 */
-  EditarItem(item){                        
-    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);  //firebase4|| comillas espaciales contenido dinamico
+  EditarItem(item) {
+    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);  /*firebase4|| comillas espaciales contenido dinamico*/
     this.itemDoc.update(item);
   }
   /*firestore5 */

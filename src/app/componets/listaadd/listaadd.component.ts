@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConexionService } from 'src/app/services/conexion.service';//firebase3 || llama servicio
+import { ConexionService } from 'src/app/services/conexion.service'; /*firebase3 || llama servicio*/
 
 @Component({
   selector: 'app-listaadd',
@@ -8,18 +8,18 @@ import { ConexionService } from 'src/app/services/conexion.service';//firebase3 
 })
 export class ListaaddComponent implements OnInit {
 
-  item:any = {                  //firebase3 || atraves del formulario se rellenara
-    name:''
-  }
+  item: any = {          /*firebase3 || atraves del formulario se rellenara*/
+    name: ''
+  };
 
-  constructor( private servicio:ConexionService) { }
+  constructor( private servicio: ConexionService) { }
 
   ngOnInit() {
   }
 
-  agregar(){
+  agregar() {
     this.servicio.AgregarItem(this.item);
-    this.item.name='';
+    this.item.name = '';
   }
 
 }
